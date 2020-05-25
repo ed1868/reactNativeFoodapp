@@ -3,7 +3,7 @@ export const categories = [
     id: 3,
     name: 'Cookies',
     photo_url:
-    'https://www.telegraph.co.uk/content/dam/Travel/2019/January/france-food.jpg?imwidth=1400'
+    'https://www.loveandoliveoil.com/wp-content/uploads/2019/12/cookies-n-cream-cookies-FEAT.jpg'
   },
   {
     id: 1,
@@ -24,8 +24,8 @@ export const categories = [
   },
   {
     id: 0,
-    name: 'Pizza',
-    photo_url: 'https://amp.businessinsider.com/images/5c084bf7bde70f4ea53f0436-750-563.jpg'
+    name: 'Sushi',
+    photo_url: 'https://thenypost.files.wordpress.com/2020/03/sushi-94.jpg?quality=80&strip=all'
   },
 ];
 
@@ -33,8 +33,8 @@ export const recipes = [
   {
     recipeId: 122,
     categoryId: 3,
-    title: 'Oatmeal Cookies',
-    photo_url: 'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
+    title: 'Brookie Cookies',
+    photo_url: 'https://www.loveandoliveoil.com/wp-content/uploads/2019/12/cookies-n-cream-cookies-FEAT.jpg',
     photosArray: [
       'https://www.texanerin.com/content/uploads/2019/06/nobake-chocolate-cookies-1-650x975.jpg',
       "https://namelymarly.com/wp-content/uploads/2018/04/20180415_Beet_Lasagna_10.jpg",

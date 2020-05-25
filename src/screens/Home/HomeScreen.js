@@ -27,6 +27,7 @@ export default class HomeScreen extends React.Component {
   };
 
   renderRecipes = ({ item }) => (
+
     <TouchableHighlight underlayColor='rgba(73,182,77,1,0.9)' onPress={() => this.onPressRecipe(item)}>
       <View style={styles.container}>
         <Image style={styles.photo} source={{ uri: item.photo_url }} />
@@ -37,6 +38,7 @@ export default class HomeScreen extends React.Component {
   );
 
   render() {
+ console.log(recipes[0]);
     return (
       <View>
         <FlatList
