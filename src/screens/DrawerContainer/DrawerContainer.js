@@ -46,7 +46,7 @@ export default class DrawerContainer extends React.Component {
             title="LOG IN"
             source={require("../../../assets/icons/logIn.png")}
             onPress={() => {
-              navigation.navigate("Search");
+              navigation.navigate("Login");
               navigation.closeDrawer();
             }}
           />

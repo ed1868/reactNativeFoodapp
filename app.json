@@ -1,5 +1,8 @@
 {
   "expo": {
+    "facebookScheme": "fb1047121222092614",
+    "facebookAppId": "1047121222092614",
+    "facebookDisplayName": "instmobile",
     "name": "Instafood",
     "slug": "instafood-reactNative-recipes-app",
     "description": "React Native Recipes App Demo",
