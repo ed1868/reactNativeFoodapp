@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+​
 import styles from "./style";
 import {
   Keyboard,
@@ -12,13 +12,13 @@ import {
 } from "react-native";
 import { Button } from "react-native-elements";
 import * as Facebook from "expo-facebook";
-
+​
 const appId = "283152059742151";
-
+​
+​
 export default class LoginScreen extends Component {
-   
+  
   render() {
-
     return (
       <KeyboardAvoidingView style={styles.containerView} behavior="padding">
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
@@ -29,11 +29,14 @@ export default class LoginScreen extends Component {
                 placeholder="Username"
                 placeholderColor="#c4c3cb"
                 style={styles.loginFormTextInput}
+                onChangeText={ this.updateText = e => {console.log(e)}} 
+                
               />
               <TextInput
                 placeholder="Password"
                 placeholderColor="#c4c3cb"
                 style={styles.loginFormTextInput}
+                onChangePW = { this.secureLoging = e => {console.log(e)}}
                 secureTextEntry={true}
               />
               <Button
@@ -53,30 +56,19 @@ export default class LoginScreen extends Component {
       </KeyboardAvoidingView>
     );
   }
-
+​
   componentDidMount() {}
-
+​
   componentWillUnmount() {}
-
+  
+​
   onLoginPress() {
     console.log(`app Id: ${appId}`);
   }
-
+​
   async onFbLoginPress() {
-    // const { type, token } = await Expo.Facebook.logInWithReadPermissionsAsync(appId, {
-
-    //   permissions: ['public_profile', 'email'],
-    // });
-    // console.log('entro');
-    // if (type === 'success') {
-    //   const response = await fetch(
-    //     `https://graph.facebook.com/me?access_token=${token}`);
-    //   Alert.alert(
-    //     'Logged in!',
-    //     `Hi ${(await response.json()).name}!`,
-    //   );
-    // }
-
+    // Facebook . api ( '/ {user-id} / friends' , 'GET' , {}, function ( response ) { // Insert your code here } );
+​
     try {
       await Facebook.initializeAsync(appId);
       const {
@@ -88,15 +80,21 @@ export default class LoginScreen extends Component {
       } = await Facebook.logInWithReadPermissionsAsync({
         permissions: ["public_profile"],
       });
+​
+​
       if (type === "success") {
         // Get the user's name using Facebook's Graph API
         const response = await fetch(
           `https://graph.facebook.com/me?access_token=${token}`
         );
+​
         console.log(type);
         console.log("entro");
         console.log(expires, permissions);
+​
         Alert.alert("Logged in!", `Hi ${(await response.json()).name}!`);
+​
+​
       } else {
         // type === 'cancel'
       }
