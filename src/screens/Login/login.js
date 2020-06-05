@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-​
+import React, { Component } from "react"
 import styles from "./style";
 import {
   Keyboard,
@@ -12,10 +11,7 @@ import {
 } from "react-native";
 import { Button } from "react-native-elements";
 import * as Facebook from "expo-facebook";
-​
 const appId = "283152059742151";
-​
-​
 export default class LoginScreen extends Component {
   
   render() {
