@@ -20,7 +20,7 @@ export default class LoginScreen extends Component {
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
           <View style={styles.loginScreenContainer}>
             <View style={styles.loginFormView}>
-              <Text style={styles.logoText}>Rep Grub</Text>
+              <Text style={styles.logoText}>Recipe Grub</Text>
               <TextInput
                 placeholder="Username"
                 placeholderColor="#c4c3cb"
@@ -52,19 +52,13 @@ export default class LoginScreen extends Component {
       </KeyboardAvoidingView>
     );
   }
-​
   componentDidMount() {}
-​
   componentWillUnmount() {}
-  
-​
   onLoginPress() {
     console.log(`app Id: ${appId}`);
   }
-​
   async onFbLoginPress() {
     // Facebook . api ( '/ {user-id} / friends' , 'GET' , {}, function ( response ) { // Insert your code here } );
-​
     try {
       await Facebook.initializeAsync(appId);
       const {
@@ -76,21 +70,15 @@ export default class LoginScreen extends Component {
       } = await Facebook.logInWithReadPermissionsAsync({
         permissions: ["public_profile"],
       });
-​
-​
       if (type === "success") {
         // Get the user's name using Facebook's Graph API
         const response = await fetch(
           `https://graph.facebook.com/me?access_token=${token}`
         );
-​
         console.log(type);
         console.log("entro");
         console.log(expires, permissions);
-​
         Alert.alert("Logged in!", `Hi ${(await response.json()).name}!`);
-​
-​
       } else {
         // type === 'cancel'
       }

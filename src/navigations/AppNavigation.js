@@ -1,19 +1,20 @@
-import { createAppContainer } from 'react-navigation';
-import {createDrawerNavigator} from 'react-navigation-drawer'
-import {createStackNavigator} from 'react-navigation-stack'
+import { createAppContainer } from "react-navigation";
+import { createDrawerNavigator } from "react-navigation-drawer";
+import { createStackNavigator } from "react-navigation-stack";
 /* import React from 'react'
 import {createStackNavigator} from '@react-navigation/stack'
 import {NavigationContainer} from '@react-navigation/native'
 import {createDrawerNavigator} from '@react-navigation/drawer' */
-import HomeScreen from '../screens/Home/HomeScreen';
-import CategoriesScreen from '../screens/Categories/CategoriesScreen';
-import RecipeScreen from '../screens/Recipe/RecipeScreen';
-import RecipesListScreen from '../screens/RecipesList/RecipesListScreen';
-import DrawerContainer from '../screens/DrawerContainer/DrawerContainer';
-import IngredientScreen from '../screens/Ingredient/IngredientScreen';
-import SearchScreen from '../screens/Search/SearchScreen';
-import IngredientsDetailsScreen from '../screens/IngredientsDetails/IngredientsDetailsScreen';
-import Login from '../screens/Login/login';
+import HomeScreen from "../screens/Home/HomeScreen";
+import CategoriesScreen from "../screens/Categories/CategoriesScreen";
+import RecipeScreen from "../screens/Recipe/RecipeScreen";
+import RecipesListScreen from "../screens/RecipesList/RecipesListScreen";
+import DrawerContainer from "../screens/DrawerContainer/DrawerContainer";
+import IngredientScreen from "../screens/Ingredient/IngredientScreen";
+import SearchScreen from "../screens/Search/SearchScreen";
+import IngredientsDetailsScreen from "../screens/IngredientsDetails/IngredientsDetailsScreen";
+import Login from "../screens/Login/login";
+import SignUp from "../screens/SignUp/signUp";
 
 /* const Stack = createStackNavigator();
 
@@ -49,21 +50,23 @@ const MainNavigator = createStackNavigator(
     Ingredient: IngredientScreen,
     Search: SearchScreen,
     IngredientsDetails: IngredientsDetailsScreen,
-    Login : Login
+    SignUp : SignUp,
+    Login: Login,
+    
   },
   {
-    initialRouteName: 'Home',
+    initialRouteName: "SignUp",
     // headerMode: 'float',
     defaulfNavigationOptions: ({ navigation }) => ({
       headerTitleStyle: {
-        fontWeight: 'bold',
-        textAlign: 'center',
-        alignSelf: 'center',
+        fontWeight: "bold",
+        textAlign: "center",
+        alignSelf: "center",
         flex: 1,
-      }
-    })
+      },
+    }),
   }
-); 
+);
 
 /* const Drawer = createDrawerNavigator();
 
@@ -84,13 +87,13 @@ function DrawerStack() {
 
 const DrawerStack = createDrawerNavigator(
   {
-    Main: MainNavigator
+    Main: MainNavigator,
   },
   {
-    drawerPosition: 'left',
-    initialRouteName: 'Main',
+    drawerPosition: "left",
+    initialRouteName: "Main",
     drawerWidth: 250,
-    contentComponent: DrawerContainer
+    contentComponent: DrawerContainer,
   }
 );
 
@@ -101,7 +104,7 @@ const DrawerStack = createDrawerNavigator(
     </NavigationContainer>
   )
 } */
- 
+
 export default AppContainer = createAppContainer(DrawerStack);
 
 console.disableYellowBox = true;

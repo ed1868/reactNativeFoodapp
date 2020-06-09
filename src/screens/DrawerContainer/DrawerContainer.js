@@ -6,6 +6,7 @@ import MenuButton from "../../components/MenuButton/MenuButton";
 
 export default class DrawerContainer extends React.Component {
   render() {
+    
     const { navigation } = this.props;
     return (
       <View style={styles.content}>
@@ -38,7 +39,7 @@ export default class DrawerContainer extends React.Component {
             title="SIGN UP"
             source={require("../../../assets/icons/signUp.png")}
             onPress={() => {
-              navigation.navigate("Search");
+              navigation.navigate("SignUp");
               navigation.closeDrawer();
             }}
           />

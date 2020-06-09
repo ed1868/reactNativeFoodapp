@@ -12,20 +12,33 @@ import {
 } from "react-native";
 import { Button } from "react-native-elements";
 
-
-export default class LoginScreen extends Component {
-   
+export default class SignUp extends Component {
   render() {
-
     return (
       <KeyboardAvoidingView style={styles.containerView} behavior="padding">
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
           <View style={styles.loginScreenContainer}>
             <View style={styles.loginFormView}>
-              <Text style={styles.logoText}>Rep Grub</Text>
+              <Text style={styles.logoText}>Create an Account</Text>
               <TextInput
                 placeholder="Username"
                 placeholderColor="#c4c3cb"
+                style={styles.loginFormTextInput}
+              />
+              <TextInput
+                placeholder="First Name"
+                placeholderColor="#c4c3cb"
+                style={styles.loginFormTextInput}
+              />
+              <TextInput
+                placeholder="Last Name"
+                placeholderColor="#c4c3cb"
+                style={styles.loginFormTextInput}
+              />
+              <TextInput
+                placeholder="Email"
+                placeholderColor="#c4c3cb"
+                autoCompleteType="email"
                 style={styles.loginFormTextInput}
               />
               <TextInput
@@ -34,17 +47,25 @@ export default class LoginScreen extends Component {
                 style={styles.loginFormTextInput}
                 secureTextEntry={true}
               />
+              <TextInput
+                placeholder="Phone Number"
+                keyboardType="number-pad"
+                placeholderColor="#c4c3cb"
+                blurOnSubmit
+                autoCapitalize="none"
+                autoCorrect={false}
+             
+                autoCompleteType="tel"
+                maxLength={10}
+                style={styles.loginFormTextInput}
+            
+              />
               <Button
-                buttonStyle={styles.loginButton}
+                buttonStyle={styles.submitButton}
                 onPress={() => this.onLoginPress()}
-                title="Login"
+                title="Submit"
               />
-              <Button
-                buttonStyle={styles.fbLoginButton}
-                onPress={() => this.onFbLoginPress()}
-                title="Login with Facebook"
-                // color="#3897f1"
-              />
+
             </View>
           </View>
         </TouchableWithoutFeedback>
@@ -58,23 +79,5 @@ export default class LoginScreen extends Component {
 
   onLoginPress() {
     console.log(`app Id: ${appId}`);
-  }
-
-  async onFbLoginPress() {
-    // const { type, token } = await Expo.Facebook.logInWithReadPermissionsAsync(appId, {
-
-    //   permissions: ['public_profile', 'email'],
-    // });
-    // console.log('entro');
-    // if (type === 'success') {
-    //   const response = await fetch(
-    //     `https://graph.facebook.com/me?access_token=${token}`);
-    //   Alert.alert(
-    //     'Logged in!',
-    //     `Hi ${(await response.json()).name}!`,
-    //   );
-    // }
-
-
   }
 }
