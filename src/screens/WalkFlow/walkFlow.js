@@ -19,9 +19,9 @@ const flowData = {
 export default class TestPage extends Component {
     componentDidMount(){
         StatusBar.setHidden(true);
-        setTimeout(() => {
-            this.props.navigation.navigate('Home');
-        }, 1000);
+        // setTimeout(() => {
+        //     this.props.navigation.navigate('Home');
+        // }, 10000);
     }
 
     _onWorkFlowFinished = () => {
