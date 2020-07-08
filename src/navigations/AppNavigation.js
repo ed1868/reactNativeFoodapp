@@ -6,6 +6,7 @@ import {createStackNavigator} from '@react-navigation/stack'
 import {NavigationContainer} from '@react-navigation/native'
 import {createDrawerNavigator} from '@react-navigation/drawer' */
 import WalkFlow from "../screens/WalkFlow/walkFlow";
+import AfterTestPage  from "../screens/WalkFlow/AfterTestPage";
 import HomeScreen from "../screens/Home/HomeScreen";
 import CategoriesScreen from "../screens/Categories/CategoriesScreen";
 import RecipeScreen from "../screens/Recipe/RecipeScreen";
@@ -45,6 +46,7 @@ function MainNavigator() {
 const MainNavigator = createStackNavigator(
   { 
     WalkFlow : WalkFlow,
+    AfterTestPage : AfterTestPage,
     Home: HomeScreen,
     Categories: CategoriesScreen,
     Recipe: RecipeScreen,
