@@ -2,6 +2,7 @@
 
 
 ## Features
+- App Walkthrough
 - Recipes List
 - Categories
 - Ingredients
