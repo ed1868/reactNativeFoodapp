@@ -10,9 +10,21 @@ import {
   KeyboardAvoidingView,
 } from "react-native";
 import { Button } from "react-native-elements";
+import MenuImage from '../../components/MenuImage/MenuImage';
 import * as Facebook from "expo-facebook";
 const appId = "283152059742151";
 export default class LoginScreen extends Component {
+
+  static navigationOptions = ({ navigation }) => ({
+    title: 'Sign In',
+    headerLeft: (
+      <MenuImage
+        onPress={() => {
+          navigation.openDrawer();
+        }}
+      />
+    )
+  });
   
   render() {
     return (
