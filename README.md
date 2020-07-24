@@ -1,5 +1,6 @@
 # Recipes App in React Native
 
+Made by Eddie Ruiz from AI Nomads.llc
 
 ## Features
 - App Walkthrough
